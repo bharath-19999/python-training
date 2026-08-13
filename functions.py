@@ -58,3 +58,15 @@
 # print(func)
 # func = reduce(lambda a,b: a + b, num)
 # print(func)
+
+
+# n = 1
+# m = 2
+# def addition():
+#     res = n+m
+#     print(res)
+# addition()
+# def sub():
+#     res = n-m
+#     print(res)
+# sub()

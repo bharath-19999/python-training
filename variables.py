@@ -175,3 +175,81 @@ T → Tuple
 # print(tuple) # Err
 
 
+"""  DICTIONARY  """
+d1 = {
+    "key1" : "GenAi",
+    "key2" : "ML",
+    "key3" : "AgenticAI"
+}
+# print(d1)
+# print(d1.keys())
+# print(d1.values())
+# print(d1.items())
+
+# d2 = {
+#     (10,20) : (10,29)
+# }
+# print(d2)
+
+# for x in d1.keys():
+#     print(x)
+# for y in d1.values():
+#     print(y)
+# for k,v in d1.items():
+#     print(k,v)
+
+
+""" SET """
+# s1 = {10,20,30,10,40}
+# print(s1)
+# s2 = {}         # Dict
+# print(type(s2))
+# s3 = set()      # Set
+# print(type(s3))
+
+# list = [10,20,10,30]
+# res = set(list)
+# print(res)
+
+# tuple = (30,10,20,15,10)
+# res = set(tuple)
+# print(res)
+
+"""  NONE  """
+# None represent "No-Value"
+# x = None
+# print(x)
+# print(type(x))
+# print(x == 0)
+# print(x == "")
+# print(x == False)
+
+# if x == None:
+#     x = "Project Assigned"
+# print(x)
+
+
+"""   EXCERCISE  """
+# a = 1000
+# b = 2000
+# print(f"Before swap a : {a} and b : {b}")
+# b,a = a,b
+# print(f"After swap a : {a} and b : {b}")
+
+# print( list(range(5)) )
+# print( list(range(2,7)) )
+# print( list(range(1,10,2)) )
+# print( list(range(10,2,-1)))
+
+# a = 10
+# b = 20
+# c = 5
+# if a>b and a>c:
+#     print("a is greater")
+# elif b>c and b>a:
+#     print("b is greater")
+# else:
+#     print("c is greater")
+
+# res = a if a>b and a>c else b if b>c else c
+# print(res)
