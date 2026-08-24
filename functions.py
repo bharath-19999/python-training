@@ -1,194 +1,57 @@
-# no parameters no return
-# def test():
-#     print("Hello")
-# test()
+"""   FUNCTIONS 
+## Python Functions — Interview Notes
 
-# with parameters no return
-# def test(param1, param2):
-#     print(f"Hello....{param1},{param2}")
-# test("cbk","csk")
-
-# no paramerter with return
-# def test():
-#     num1 = 10
-#     num2 = 20
-#     sum = num1+num2
-#     return sum
-# x = test()
-# print(x)
-
-# with parameters with return
-# def test(param1,param2,param3):
-#     sum = param1+param2+param3
-#     return sum
-# x = test(10,45,56)
-# print(x)
-
-# ---------------------------------------------
-
-# 1. normal parameter
-# 2. default parameter
-# 3. variable-length parameter
-# 4. keyword parameter
-# def test(a,b=15):
-#     n = a+b
-#     return n
-# i = test(13,24) 
-# print(i)
-
-# def test(num,name="rama",*param1,**param2):
-#     print(f"{num}....{name}....{param1}....{param2}")
-# test(12,32,3,23,232,5,43,2,2,4,n="bharath")
-
-# ----------------------------------------------------------
-
-# Lambda functions
-# func = lambda n:n**2
-# print(func(4))
-
-# func = lambda a,b : a + b
-# print(func(4,7))
-# sam = lambda x : "even" if x%2==0 else "odd"
-# print(sam(12))
-# from functools import reduce
-# num = (1,2,3,4,5,6)
-# func = map(lambda a : a * 100, num)
-# print(list(func))
-# func = list(filter(lambda n : n%2==0, num))
-# print(func)
-# func = reduce(lambda a,b: a + b, num)
-# print(func)
+* Function: Reusable block of code that performs a specific task.
+* Syntax: def function_name(parameters):
+* Parameter: Variable defined in function.
+* Argument: Actual value passed during function call.
+* Positional argument: Matched by position → `add(10,20)`.
+* Keyword argument: Matched by name → `add(a=10,b=20)`.
+* Return: Sends a result back → `return result`.
+* Default parameter: def greet(name="Guest").
+* *args: Accepts multiple positional arguments as a tuple.
+* **kwargs: Accepts multiple keyword arguments as a dictionary.
+* Lambda: Anonymous single-expression function → `lambda x: x*x`.
+* Built-in: Python-provided functions like `print()`, `len()`, `int()`, `sum()`.
+* User-defined: Functions created using `def`.
+* Recursive: Function calling itself.
+* Higher-order: Function accepts/returns another function.
+*   map(): Transforms elements.
+*   filter(): Selects elements based on condition.
+*   reduce(): Combines elements into one result; requires `functools`.
+* Key interview point: Functions improve **code reuse, readability, modularity, and maintainability**.
 
 
-# n = 1
-# m = 2
-# def addition():
-#     res = n+m
-#     print(res)
-# addition()
-# def sub():
-#     res = n-m
-#     print(res)
-# sub()
-
-"""  Practice """
-# def mul(num):
-#     x = num * num
-#     return x
-# res = mul(10)
-# print(f"Multiplication of num : {res}")
-
-# x = lambda num : num * num
-# print(f"Multiplication of num : {x(10)}")
-
-# str1 = "Hello"
-# str2 = "Hellt"
-# x = "Strings are same" if str1 == str2 else "strings are different"
-# print(x)
-
-"""  sum of two numbers  """
-# def addition(num1,num2):
-#     sum = num1 + num2
-#     return sum
-# x = addition(20,30)
-# print(f"Addition of two numbers is : {x}")    
-
-""" even or odd  """
-# num = int(input("Enter number : "))
-# res = "EVEN" if num%2 == 0 else "ODD"
-# print(res)
-
-""" largest of 3 numbers  """
-# a = int(input("Enter a : "))
-# b = int(input("Enter b : "))
-# c = int(input("Enter c : "))
-# res = "a is greater" if a>b and a>c else "b is greater" if b>c else "c is greater"
-# print (res)
-
-"""  calculate factorial  """
-# a = int(input("Enter a number : "))
-# factorial = 1
-# for i in range(1,a):
-#     factorial = factorial * (i+1)
-# print(factorial)
-
-""""  reverse a string """
-# str = input("Enter string : ")
-# print(f"reverse of a string is : {str[::-1]}")
-
-"""  palindrome """
-# str = input("Enter a string : ")
-# res = "Palindrome" if str == str[::-1] else "Not a palindrome"
-# print(res)
-
-"""  count vowels """
-# str1 = input("Enter a string : ")
-# str = str1.lower()
-# # str = input("Enter a string : ").lower()
-# print(str)
-# count = 0
-# for i in range(0,len(str)):
-#     if str[i] == 'a' or str[i] == 'e' or str[i] == 'i' or str[i] == 'o' or str[i] == 'u':
-#         count += 1
-# print(f"count is : {count}")
-
-"""  count frequency of each character """  #need to understand
-# str = input("Enter a string : ").lower()  
-# frequency = {}
-# for char in str:
-#     frequency[char] += 
-
-"""  check two strings are anagrams  """
-# same characters with same length
-# different meaning
-
-# str1 = "eat"
-# str2 = "tea"
-# # if len(str1) == len(str2)
-# for str1[i] in range(0,len(str1)):
-#     print(str1[i])
-#     # for char2 in range(0,len(str2)):
-#     #     if char1 == char2:
-
-# def is_anagram(str1,str2):
-#     return sorted(str1.lower()) == sorted(str2.lower())
-# res = is_anagram("Heart","EARth")
-# x = "anagram" if res==True else "not an anagram"
-# print(x)
-
-# # str = "Hello"
-# # x = sorted(str).lower()
-# str = input("Enter a string : ").lower()
-# x = sorted(str)
-# print(x)
+Common Python built-in functions
+| Function      | Purpose                 | Example                         |
+| ------------- | ----------------------- | ------------------------------- |
+| `print()`     | Display output          | `print("Hello")`                |
+| `len()`       | Get length              | `len("Python")` → `6`           |
+| `type()`      | Get data type           | `type(10)` → `int`              |
+| `int()`       | Convert to integer      | `int("10")` → `10`              |
+| `str()`       | Convert to string       | `str(10)` → `"10"`              |
+| `float()`     | Convert to float        | `float("10.5")` → `10.5`        |
+| `list()`      | Create/convert to list  | `list("abc")` → `['a','b','c']` |
+| `tuple()`     | Create/convert to tuple | `tuple([1,2])`                  |
+| `dict()`      | Create dictionary       | `dict(a=1)`                     |
+| `set()`       | Create set              | `set([1,2,2])`                  |
+| `sum()`       | Calculate sum           | `sum([1,2,3])` → `6`            |
+| `max()`       | Find maximum            | `max([10,20,5])` → `20`         |
+| `min()`       | Find minimum            | `min([10,20,5])` → `5`          |
+| `sorted()`    | Sort values             | `sorted([3,1,2])`               |
+| `abs()`       | Absolute value          | `abs(-10)` → `10`               |
+| `round()`     | Round number            | `round(10.6)` → `11`            |
+| `range()`     | Generate sequence       | `range(5)`                      |
+| `enumerate()` | Index + value           | `enumerate(["a","b"])`          |
+| `zip()`       | Combine iterables       | `zip([1,2],[3,4])`              |
+| `map()`       | Transform elements      | `map(int, ["1","2"])`           |
+| `filter()`    | Filter elements         | `filter(...)`                   |
 
 
-""" find max of list """
-# list = [10,50,20,40,30]
-# res = max(list)
-# print(res)
-
-""" remove duplicates from list"""
-# numbers = [1, 2, 2, 3, 3]
-# unique_numbers = []
-
-# for item in numbers:
-#     if item not in unique_numbers:
-#         unique_numbers.append(item)
-
-# print(unique_numbers)  
-# # Output: [1, 2, 3]
+"""
 
 
-# nums = [1,4,3,1,2,3]
-# uniq_num = []
-
-# for item in nums:
-#     print(item)
-
-
-
-"""    class  """
+# User defiined functions
 # def test():
 #     print("welcome to funtions!!") 
 
@@ -281,6 +144,7 @@
 # test(10,1000,2,3,4,5,key1=10,key2=400)
 
 """  lambda functions """
+# functions without name
 # x = lambda num1: num1*num1
 # res = x(10)
 # print(res)
@@ -297,3 +161,118 @@
 # inner = middle(20)
 # res = inner(30)
 # print(res)
+
+# Example -16
+# print(list(map(lambda num1:num1*100,[1,2,3,4,5])))
+# print ( list(map(lambda x,y:x+y,(1,2,3,4,5),(10,11,12,13,14))))
+# print ( list(map(lambda num1,num2:num1-num2,[1,2],[10,11,12,13,14])))  # loop stop after 1,2
+# print(list(map(int,"10 20 30 40 50".split())))
+# res = map(lambda x:x**x,[1,2,3,4,5])
+# x = list(res)
+# print(x)
+# y = list(res)
+# print(y)
+
+# print( tuple(filter(lambda num1:num1>=3,(1,2,3,4,5))))
+# print( list (map(lambda num1:num1*num1, filter(lambda num1:num1%2==0, [1,2,3,4,5]))))
+# print(list(map(None,[1,2,3,4,5])))
+# res = map(lambda x: list(map(lambda y:y*2,x)),[[1,2],[3,4],[5,6]])
+# print(list(res))
+# from functools import reduce
+# print(reduce(lambda num1,num2:num1+num2,[1,2,3,4,5]))
+
+# from functools import reduce
+# num = [1,2,3,4,5]
+# print(list(map(lambda num:num*2,num)))
+# print(list(filter(lambda num:num%2==0,num)))
+# print(reduce(lambda num1,num2:num1*num2,num))
+
+"""
+map()    → can work with multiple iterables
+map(function, iterable1, iterable2)
+filter() → works with one iterable
+filter(condition/function, iterable)
+             ↓              ↓
+       True/False       collection
+lambda x: x > 3 → function
+num1            → iterable
+
+"""
+# num1 = (1,2,3,4,5)
+# num2 = (3,6,9,12,15)
+# print(list(map(lambda x,y:x+y, num1, num2)))
+# print(list(filter(lambda x,y:x+y, num1, num2))) # Error - here having 2 iterables i.e., num1,num2
+
+# res = "the is and".split()
+# print(res)    # ['the', 'is', 'and']
+
+
+""" recursive function """
+# function calling itself
+# def countdown(n):
+#     if n == 0:
+#       return 
+#     print(n)
+#     countdown(n-1)
+# countdown(5)
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     return n * factorial(n-1)
+# print(factorial(5))
+
+# def test_func(item,items=[]):
+#     items.append(item)
+#     return items
+# print( test_func(10))  # [10]
+# print( test_func(20))  # [10,20]
+
+# def test_func(item,items=None):
+#     if items is None:
+#         items = []            # Reset
+#         items.append(item)
+#         return items
+# print( test_func(10))
+# print( test_func(20))
+   
+# list1 = [1,2,3]
+# list2 = [1,2,3]
+# print(list1 is list2)
+# print(list1 == list2)
+
+# list1 = [1,2,3]
+# list2 = list1   # same memory location
+# print(list1 is list2)
+# print(list1 == list2)
+
+# num1 = 100
+# num2 = 100
+# print(num1 is num2)
+# print(num1 == num2)
+
+# num1 = 257
+# num2 = 257 
+# print(num1 is num2)  # in old laptops it will br false
+# print(num1 == num2)
+
+# boolean is the child data type of integer
+# print (True + False + True)
+# print(isinstance(True,int))
+# print(isinstance(False,int))
+# print(isinstance(True,bool))
+
+# print(True == 1)
+# print(True is 1)
+
+# list1 = [1,2,3]
+# list2 = list1
+# list2.append(4)   # list1 memory also updated
+# print(list1)
+
+# print( tuple(range(5)))
+# print( list(range(1,10)))
+# print( list(range(0,5,2)))
+# print( list(range(10,0,-1)))
+# print( list(range(5,0,-2)))
+
