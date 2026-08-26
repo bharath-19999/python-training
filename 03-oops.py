@@ -365,4 +365,3 @@ instance - separate copies are there. copy1 changes other copies no effect eg: x
 # obj = Child()
 # obj.add()
 
-
