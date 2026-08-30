@@ -36,7 +36,7 @@
 
 # list5 = [10,5,30,20,50]
 # list5.sort()
-# print(list5)    # change to the orin=ginal list5
+# print(list5)    # change to the orginal list5
 
 # list1 = [10,20,30]
 # list1.append(40)
@@ -82,3 +82,73 @@
 
 # for index,e in enumerate(list1): # for indexed list we use enumerator
 #     print(index,e,sep="-->")
+
+
+# list1 = [1,2,3,4,5]
+# list2 = [10,20,30,40,50]
+# for e1,e2 in zip(list1,list2):
+#     print(e1,e2,sep="------>")
+
+# list1 = [10,20,30,40,50,60,70,80,90,100]
+# print(list1[0:7:2])
+# print(list1[1:6:2])
+# print(list1[:1])
+# print(list1[::2])
+# print(list1[::-2])
+# print(list1[::3])
+# print(list1[::-3])
+
+# list1 = [[10,20,30],[40,50,60],[70,80,90]]
+# print(list1[0][0])
+# print(list1[1][1])
+# print(list1[2][2])
+# for inner in list1:
+#     for index,element in enumerate(inner):
+#         print(index,element,sep="---->")
+#     print("-----------")
+
+# list1 = [[10,20],[30,40]]
+# list2 = list1
+# list1[0].append(30)
+# print(list2)
+
+# deep copy
+# import copy
+# list1 = [[10,20],[30,40]]
+# list2 = copy.deepcopy(list1)
+# list1[0][0]=100
+# print(list1)
+# print(list2)
+
+# "==" - compare values
+# "is" - compare memory
+# list1 = [10,20,30]
+# list2 = [10,20,30]
+# list2 = list1
+# print(list1 == list2)
+# print(list1 is list2)
+
+# list1 = [10,20]
+# list2 = [30,40]
+# list3 = list1 + list2
+# print(list1)
+
+# list1.extend(list2)
+# print(list1)
+# # '*' - externally performs concatination
+# list3 = [*list1,*list2]
+# print(list3)
+
+# list1 = [10,20,30]
+# list2 = list1 * 3
+# print(list2)
+
+# list1 = ["Hello",10,10.1,True,[10,20],(10,20),{"name":"Hello"},{10,20},None]
+# print(list1)
+
+# list1 = [10,20,30,10,20,40]
+# list2 = []
+# for element in list1:
+#     if list1.count(element)>1:
+#         list2.append(element)
+# print(set(list2))
