@@ -105,3 +105,4 @@
 
 # res = t2[:2] + (25,) + t2[2:]
 # print(res)      # add at middle,nut in anothe tuple
+
