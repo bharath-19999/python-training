@@ -370,3 +370,23 @@
 #     print("False")
 #     print(id(a))
 #     print(id(b))
+
+
+
+
+tuple1 = (101,29,40)
+# print(len(tuple1))
+# print(tuple(sorted(tuple1)))
+
+# for e in tuple1:
+#     print(e)
+
+# for i,e in enumerate(tuple1):
+#     print(i,e,sep="-->")
+
+# tuple2 = (102,2,40)
+
+# for a,b in zip(tuple1,tuple2):
+#     print(a,b,sep="-->")
+
+print(*(e for e in tuple1))
